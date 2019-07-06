@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!--
+{% macro pagination(url, page) %}
+    <ul class="uk-pagination">
+        {% if page.has_previous %}
+            <li><a href="{{ url }}{{ page.page_index - 1 }}"><i class="uk-icon-angle-double-left"></i></a></li>
+        {% else %}
+            <li class="uk-disabled"><span><i class="uk-icon-angle-double-left"></i></span></li>
+        {% endif %}
+            <li class="uk-active"><span>{{ page.page_index }}</span></li>
+        {% if page.has_next %}
+            <li><a href="{{ url }}{{ page.page_index + 1 }}"><i class="uk-icon-angle-double-right"></i></a></li>
+        {% else %}
+            <li class="uk-disabled"><span><i class="uk-icon-angle-double-right"></i></span></li>
+        {% endif %}
+    </ul>
+{% endmacro %}
+-->
+<html>
+<head>
+    <meta charset="UTF-8">
+    {% block meta %}<!-- block meta  -->{% endblock %}
+    <title>{% block title %} ? {% endblock %} - Awesome Python Webapp</title>
+    <link rel="stylesheet" href="/static/css/uikit.min.css">
+    <link rel="stylesheet" href="/static/css/awesome.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/sha1.min.js"></script>
+    <script src="/static/js/uikit.min.js"></script>
+    <script src="/static/js/uikit-icons.min.js"></script>
+    <script src="/static/js/sticky.min.js"></script>
+    <script src="/static/js/vue.min.js"></script>
+    <script src="/static/js/awesome.js"></script>
+    {% block beforehead %}<!-- before head  -->{% endblock %}
+</head>
+<body>
+    <!--"uk-"开头的都是UIkit里的组件，具体请参考UIkit官网的Documents详解-->
+    <!--uk-visible@m是大于中等尺寸屏幕时显示的UI-->
+    <div class="uk-margin uk-visible@m" style="background-color:rgba(100,150,185,0);">
+        <div class="uk-container uk-container-medium">
+        <!--导航栏UI-->
+            <nav class="uk-navbar-container" uk-navbar style="background-color:rgba(255,255,255,0);">
+                <div class="uk-navbar-left uk-margin-medium-top uk-margin-medium-bottom">
+                    <a class="uk-navbar-item uk-logo uk-margin-left" href="/">
+                        <!--此处uk-icon为图标,读者可以选UIkit自带icon,也可以添加自定义icon重新打包uk-icon.js,详见官网Documentation-->
+                        <span class="uk-icon uk-margin-small-right" uk-icon="pagekit" ratio="2"></span>
+                         Awesome
+                    </a>
+                    <ul class="uk-navbar-nav">
+                        <li><a href="/"> Article | 日志</a></li>
+                        <li><a href="https://www.liaoxuefeng.com/"> Tutorial | 教程</a></li>
+                        <li><a href="https://github.com/michaelliao/"> Coding | 源码</a></li>
+                    </ul>
+                </div>
+                <div class="uk-navbar-right uk-margin-medium-top uk-margin-medium-bottom">
+                    <ul class="uk-navbar-nav">
+                    {% if __user__ %}
+                        <!--<li class="uk-parent" data-uk-dropdown>-->
+                        <!--<a href="#0"><i class="uk-icon-user"></i>{{ __user__.name }}</a>-->
+                        <!--<div class="uk-dropdown uk-dropdown-navbar">-->
+                            <!--<ul class="uk-nav uk-nav-navbar">-->
+                                <!--<li><a href="/signout">登出</a></li>-->
+                            <!--</ul>-->
+                        <!--</div>-->
+                        <!--</li>-->
+                        <!--原来的signout老不显示，只能换了-->
+                        <li>
+                            <a href="#0"> {{ __user__.name }}</a>
+                            <div class="uk-navbar-dropdown">
+                                <ul class="uk-nav uk-navbar-dropdown-nav">
+                                    <li><a href="/manage/">Manage</a></li>
+                                    <li><a href="/signout"> Logout</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    {% else %}
+                        <li><a href="/signin"> 登陆</a></li>
+                        <li><a href="/register"> 注册</a></li>
+                    {% endif %}
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <div class="uk-container uk-container-center">
+        <div class="uk-grid">
+            <!-- content -->
+            {% block content %}
+            {% endblock %}
+            <!-- // content -->
+        </div>
+    </div>
+
+    <div class="uk-margin-large-top" style="background-color:#eee; border-top:1px solid #ccc;">
+        <div class="uk-container uk-container-center uk-text-center">
+            <div class="uk-panel uk-margin-top uk-margin-bottom">
+                <p>
+                    <a target="_blank" href="https://github.com/" class="uk-icon-button uk-margin-small-right" ratio="1.1" uk-icon="github"></a>
+                    <a target="_blank" href="https://music.163.com/" class="uk-icon-button uk-margin-small-right" ratio="1.2" uk-icon="instagram"></a>
+                    <a target="_blank" href="http://www.linkedin.com" class="uk-icon-button uk-margin-small-right" ratio="1.2" uk-icon="linkedin"></a>
+                    <a target="_blank" href="https://weibo.com/" class="uk-icon-button uk-margin-small-right" ratio="1.2" uk-icon="twitter"></a>
+                </p>
+                <p>Powered by <a href="http://awesome.liaoxuefeng.com">Awesome Python Webapp</a>. Copyright &copy; 2019. 
+                    [<a href="/manage/" target="_blank">Manage</a>]</p>
+                <p><a href="http://www.liaoxuefeng.com/" target="_blank">www.liaoxuefeng.com</a>. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Python-Webapp</title>
+    <link rel="stylesheet" href="/Users/gonghuidepro/PycharmProjects/awesome-python3-webapp/www/static/css/awesome.css">
+    <link rel="stylesheet" href="/Users/gonghuidepro/PycharmProjects/awesome-python3-webapp/www/static/css/uikit.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <script src="/Users/gonghuidepro/PycharmProjects/awesome-python3-webapp/www/static/js/jquery.min.js"></script>
+    <script src="/Users/gonghuidepro/PycharmProjects/awesome-python3-webapp/www/static/js/sha1.min.js"></script>
+    <script src="/Users/gonghuidepro/PycharmProjects/awesome-python3-webapp/www/static/js/uikit.min.js"></script>
+    <script src="/Users/gonghuidepro/PycharmProjects/awesome-python3-webapp/www/static/js/uikit-icons.min.js"></script>
+    <script src="/Users/gonghuidepro/PycharmProjects/awesome-python3-webapp/www/static/js/sticky.min.js"></script>
+    <script src="/Users/gonghuidepro/PycharmProjects/awesome-python3-webapp/www/static/js/vue.min.js"></script>
+    <script src="/Users/gonghuidepro/PycharmProjects/awesome-python3-webapp/www/static/js/awesome.js"></script>
+</head>
+<body>
+    <div class="uk-margin uk-visible@m" style="background-color:rgba(100,150,185,0);">
+        <div class="uk-container uk-container-medium">
+        <nav class="uk-navbar-container" style="background-color:rgba(255,255,255,0);">
+            <div class="uk-navbar-left uk-margin-medium-top uk-margin-medium-bottom">
+                <a class="uk-navbar-item uk-logo uk-margin-left" href="/">
+                    <span class="uk-icon uk-margin-small-right" uk-icon="pagekit" ratio="2"></span>Awesome
+                </a>
+                <ul class="uk-navbar-nav">
+                    <li data-url="blogs"><a href="/"><i class="uk-icon-home"></i> 日志</a></li>
+                    <li><a target="_blank" href="https://www.liaoxuefeng.com/"><i class="uk-icon-book"></i> 教程</a></li>
+                    <li><a target="_blank" href="https://github.com/michaelliao/awesome-python3-webapp"><i class="uk-icon-code"></i> 源码</a></li>
+                </ul>
+            </div>
+            <div class="uk-navbar-right uk-margin-medium-top uk-margin-medium-bottom">
+                <ul class="uk-navbar-nav">
+                    <!--<li class="uk-parent" data-uk-dropdown>-->
+                        <!--<a href="#0"><i class="uk-icon-user"></i></a>-->
+                        <!--<div class="uk-dropdown uk-dropdown-navbar">-->
+                            <!--<ul class="uk-nav uk-nav-navbar">-->
+                                <!--<li><a href="/signout"><i class="uk-icon-sign-out"></i> 登出</a></li>-->
+                            <!--</ul>-->
+                        <!--</div>-->
+                    <!--</li>-->
+                    <li><a href="/signin"><i class="uk-icon-sign-in"></i> 登陆</a></li>
+                    <li><a href="/register"><i class="uk-icon-edit"></i> 注册</a></li>
+                </ul>
+            </div>
+        </nav>
+        </div>
+    </div>>
+
+    <div class="uk-container uk-container-center">
+        <div class="uk-grid uk-visible@m">
+            <div class="uk-width-large-3-4">
+                <article class="uk-article">
+                    <h2><a href="/blog/{{ blog.id }}">11111</a></h2>
+                    <p class="uk-article-meta">发表于1111</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </p>
+                    <p><a href="#">继续阅读 <i class="uk-icon-angle-double-right"></i></a></p>
+                </article>
+                <hr class="uk-article-divider">
+                <article class="uk-article">
+                    <h2><a href="/blog/{{ blog.id }}">11111</a></h2>
+                    <p class="uk-article-meta">发表于1111</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </p>
+                    <p><a href="#">继续阅读 <i class="uk-icon-angle-double-right"></i></a></p>
+                </article>
+                <hr class="uk-article-divider">
+                <article class="uk-article">
+                    <h2><a href="/blog/{{ blog.id }}">11111</a></h2>
+                    <p class="uk-article-meta">发表于1111</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </p>
+                    <p><a href="#">继续阅读 <i class="uk-icon-angle-double-right"></i></a></p>
+                </article>
+                <hr class="uk-article-divider">
+            </div>
+            <div class="uk-width-large-1-4">
+                <div class="uk-panel uk-panel-header">
+                    <h3 class="uk-panel-title">友情链接</h3>
+                    <ul class="uk-list uk-list-line">
+                        <li><i class="uk-icon-thumbs-o-up"></i> <a target="_blank" href="http://www.liaoxuefeng.com/category/0013738748415562fee26e070fa4664ad926c8e30146c67000">编程</a></li>
+                        <li><i class="uk-icon-thumbs-o-up"></i> <a target="_blank" href="http://www.liaoxuefeng.com/category/0013738748248885ddf38d8cd1b4803aa74bcda32f853fd000">读书</a></li>
+                        <li><i class="uk-icon-thumbs-o-up"></i> <a target="_blank" href="http://www.liaoxuefeng.com/wiki/001374738125095c955c1e6d8bb493182103fac9270762a000">Python教程</a></li>
+                        <li><i class="uk-icon-thumbs-o-up"></i> <a target="_blank" href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000">Git教程</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="uk-margin-large-top" style="background-color:#eee; border-top:1px solid #ccc;">
+        <div class="uk-container uk-container-center uk-text-center">
+            <div class="uk-panel uk-margin-top uk-margin-bottom">
+                <p>
+                    <a target="_blank" href="https://github.com/" class="uk-icon-button uk-margin-small-right" ratio="1.1" uk-icon="github"></a>
+                    <a target="_blank" href="https://music.163.com/" class="uk-icon-button uk-margin-small-right" ratio="1.2" uk-icon="instagram"></a>
+                    <a target="_blank" href="http://www.linkedin.com" class="uk-icon-button uk-margin-small-right" ratio="1.2" uk-icon="linkedin"></a>
+                    <a target="_blank" href="https://weibo.com/" class="uk-icon-button uk-margin-small-right" ratio="1.2" uk-icon="twitter"></a>
+                </p>
+                <p>Powered by <a href="http://awesome.liaoxuefeng.com">Awesome Python Webapp</a>. Copyright &copy; 2019.
+                    [<a href="/manage/" target="_blank">Manage</a>]</p>
+                <p><a href="http://www.liaoxuefeng.com/" target="_blank">www.liaoxuefeng.com</a>. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
